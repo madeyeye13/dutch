@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilda Display", serif;
+}
+
+
+
+
+@media (min-width: 728px) {
+
+
+}
+
+
+/*--------------SMALL DESKTOP-----------*/
+
+
+@media (min-width: 1024px) {
+
+    :root {
+        --gold-color:#bd8e36;
+        
+       
+        --white-color: white;
+        --fade-out:rgb(85, 85, 85);
+        --dark-main-color:#160e0d;
+        --font-1:"Gilda Display", serif;
+        --font-2: "Poppins", sans-serif;
+        --font-3: "Josefin Sans", sans-serif;
+          
+    }
+
+
+
+
+    .header {
+        display: none;
+    }
+
+
+    .heading {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* display: flex; */
+        /* justify-content: space-between; */
+        align-items: center;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+        z-index: 1000;
+    }
+
+
+    .head-wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; 
+        padding-left: 50px;
+        /* padding-right: 50px; */
+        align-content: center;
+        gap: 110px;
+
+        
+    }
+
+
+    .logo-id img {
+    
+        height: 30px; /* Adjust size as needed */
+    }
+
+    .hd-wrap h3 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 0.7em;
+        color: white;
+    }
+
+    .hd-wrap i {
+        color: white;
+        /* font-family: "Poppins", sans-serif; */
+    }
+
+    .hd-icon {
+        display: flex;
+        gap: 10px;
+        font-size: 0.9em;
+    }
+
+    .book-wrap {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: var(--font-2);
+        position: relative;
+        right: 50px;
+    
+        color: white;
+        background-color: none;
+        transition: color 0.3s, background-color 0.3s, border-top 0.3s, border-bottom 0.3s;
+    }
+
+    .book-wrap:hover {
+        color: black;
+        background-color: var(--gold-color);
+        border-top: 1px solid var(--gold-color);
+        border-bottom: 1px solid var(--gold-color);
+    }
+
+    .book-wrap h3 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        color: white;
+        position: relative;
+        font-size: 0.7em;
+    }
+
+    .nav-wrap2 {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        
+    }
+
+    .nav-wrap2 a {
+        color: inherit;
+        text-decoration: none;
+        font-family: var(--font-2);
+        font-weight: 400;
+    }
+
+    .nav-wrap2 ul, li  {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        font-size: 0.7em;
+        
+    }
+
+
+    .heading.scrolled {
+        background-color: black;
+    }
+
+
+    #hero {
+        position: relative;
+        width: 100%;
+        height: 150vh;
+        overflow: hidden;
+      }
+
+      .hero-button {
+        display: none;
+      }
+
+
+      /*================ INTRO--------------*/
+      
+      
+      .intro1 {
+        display: flex;
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+        gap: 40px;
+        margin-top: 50px;
+
+      }
+
+      .int1 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+
+      .intro-imgmom {
+        margin-top: 50px;
+        position: relative;
+        width: 50%;
+      }
+
+      
+      
+
+
+
+
+}

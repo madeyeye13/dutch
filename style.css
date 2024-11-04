@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilda Display", serif;
+    line-height: 1.5em;
+}
+
+
+
+:root {
+    --gold-color:#bd8e36;
+    
+   
+    --white-color: white;
+    --fade-out:rgb(85, 85, 85);
+    --dark-main-color:#160e0d;
+    --font-1:"Gilda Display", serif;
+    --font-2: "Poppins", sans-serif;
+    --font-3: "Josefin Sans", sans-serif;
+      
+  }
+
+
+
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .header.scrolled {
+    background-color: black;
+    height: 80px;
+  }
+  
+  .logo img {
+    
+    height: 17px; /* Adjust size as needed */
+  }
+  
+  .menu-icon i {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Navigation */
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .navigation.open {
+    transform: translateX(0);
+  }
+  
+  .close-icon {
+    padding: 15px;
+    text-align: right;
+  }
+  
+  .close-icon i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 20px;
+  }
+  
+  .nav-list li {
+    margin: 20px 0;
+  }
+  
+  .nav-list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+
+
+  /*----------HEADER FOR DESKTOP---------*/
+
+  .heading {
+    display: none;
+  }
+
+
+
+
+ /* Hero Section */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Black Overlay on Video */
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.204); /* Adjust opacity as needed */
+    z-index: 1;
+  }
+  
+  /* Thumbnail Overlay */
+  .thumbnail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.468); /* Optional overlay for better contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .thumbnail-overlay img {
+    min-width: 200%;
+    position: relative;
+  }
+
+  .hero-button {
+    position: absolute;
+    z-index: 200;
+    bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+
+  }
+
+  .hero-button button {
+    padding: 20px 50px;
+    border-radius: 50px;
+    border: none;
+    font-family: var(--font-2);
+    color: var(--dark-main-color);
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+
+  /*-------------------INTRO------------*/
+
+
+  #intro {
+    margin-top: 80px;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+
+  .intro1 {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .int {
+    margin-bottom: 20px;
+  }
+
+  .int h2 {
+    font-weight: 400;
+    font-size: 2.2em;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .int h2.reveal {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+  .int-p p {
+    font-size: 1.2em;
+    color: var(--fade-out);
+  }
+
+
+  .int-img img {
+    
+    width: 95%;
+    position: absolute;
+    bottom: 20px;
+    
+    
+  }
+
+  .intro-imgmom {
+    margin-top: 50px;
+    position: relative;
+  }
+
+
+ 
+
+  .intro-img {
+    position: relative;
+    width: 98%;
+    height: 220px;
+    background-color: var(--gold-color);
+    left: 10px;
+    
+  }
+
+  
