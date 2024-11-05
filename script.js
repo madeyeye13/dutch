@@ -68,4 +68,120 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', revealOnScroll);
 });
 
+
+/////EXPERIENCE
+
+document.addEventListener('DOMContentLoaded', function () {
+  const counters = document.querySelectorAll('.count');
+  const options = {
+    threshold: 0.5
+  };
+
+  const countObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000; // Duration of the counting in ms
+        let start = 0;
+
+        const increment = target / (duration / 16); // Increment value per frame
+
+        function updateCount() {
+          start += increment;
+          if (start < target) {
+            counter.textContent = Math.ceil(start) + (counter.textContent.includes('+') ? '+' : '');
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.textContent = target + (counter.textContent.includes('+') ? '+' : '');
+          }
+        }
+
+        updateCount();
+        observer.unobserve(counter); // Stop observing after animation
+      }
+    });
+  }, options);
+
+  counters.forEach(counter => countObserver.observe(counter));
+});
+
+
+
+//////MORE TEXT REVEAL
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Optionally remove the observer after animation
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.2,  // Trigger when 20% of the element is visible
+  rootMargin: '0px'
+});
+
+// Start observing all reveal-wrap elements
+document.querySelectorAll('.reveal-wrap').forEach(wrapper => {
+  observer.observe(wrapper);
+});
+
+
+////TESTIMONIAL
+
+
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll('.testimonial-wrapper');
+const dots = document.querySelectorAll('.dot');
+let startX = 0;
+let endX = 0;
+
+function showTestimonial(index) {
+  testimonials.forEach((testimonial, i) => {
+    testimonial.style.display = i === index ? 'flex' : 'none';
+    dots[i].classList.toggle('active', i === index);
+  });
+}
+
+function nextTestimonial() {
+  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+  showTestimonial(currentTestimonial);
+}
+
+function previousTestimonial() {
+  currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(currentTestimonial);
+}
+
+// Swipe event handlers
+testimonials.forEach((testimonial) => {
+  testimonial.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  testimonial.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  testimonial.addEventListener('touchend', () => {
+    if (startX - endX > 50) {
+      nextTestimonial(); // Swipe left
+    } else if (endX - startX > 50) {
+      previousTestimonial(); // Swipe right
+    }
+  });
+});
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentTestimonial = index;
+    showTestimonial(currentTestimonial);
+  });
+});
+
+setInterval(nextTestimonial, 6000); // Changes testimonial every 6 seconds
+showTestimonial(currentTestimonial); // Initial display
+
   
