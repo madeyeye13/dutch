@@ -184,4 +184,38 @@ dots.forEach((dot, index) => {
 setInterval(nextTestimonial, 6000); // Changes testimonial every 6 seconds
 showTestimonial(currentTestimonial); // Initial display
 
+/////split text for About Homepage
+
+document.addEventListener('DOMContentLoaded', () => {
+  const h2 = document.querySelector('.info2 h2');
+  const text = h2.textContent;
+  h2.textContent = ''; // Clear the original text
+  h2.classList.add('split-text');
+
+  // Split text into individual letters
+  [...text].forEach((char, i) => {
+    const span = document.createElement('span');
+    span.textContent = char === ' ' ? '\u00A0' : char;
+    span.classList.add('split-letter');
+    span.style.transitionDelay = `${i * 50}ms`; // Stagger the animation
+    h2.appendChild(span);
+  });
+
+  // Create intersection observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const letters = entry.target.querySelectorAll('.split-letter');
+        letters.forEach(letter => {
+          letter.classList.add('revealed');
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  observer.observe(h2);
+});
   

@@ -354,6 +354,7 @@
             .full-picture {
               display: block;
               width: 50%;
+              height: 70vh;
               margin-right: -4px; /* Aligns with the testimonial container */
             }
           
@@ -361,6 +362,19 @@
               width: 50%;
               margin-left: -4px; /* Aligns with the full picture */
             }
+
+
+
+        /*----------------------FOOOOTER------------*/
+
+
+        .footer-nav a {
+            color: var(--gold-color);
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: opacity 0.3s ease;
+          }
+          
           
 
          
