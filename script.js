@@ -218,4 +218,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(h2);
 });
+
+
+
+AOS.init({
+  duration: 1000,
+  once: true,
+});
   
