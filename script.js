@@ -35,17 +35,27 @@ document.getElementById("menuIcon").addEventListener("click", function () {
   ///////FOR HEROSECTION
 
   
-  // Wait for the page to load, then start a 4-second delay before playing the video
+ // Wait for the page to load, then start a 1-second delay before playing the video
 window.addEventListener("load", () => {
-    const heroVideo = document.getElementById("heroVideo");
-    const thumbnailOverlay = document.getElementById("thumbnailOverlay");
-  
-    // Start a 4-second timeout to play the video
-    setTimeout(() => {
+  const heroVideo = document.getElementById("heroVideo");
+  const thumbnailOverlay = document.getElementById("thumbnailOverlay");
+
+  // Start a 1-second timeout to play the video
+  setTimeout(() => {
       thumbnailOverlay.style.display = "none"; // Hide the thumbnail
       heroVideo.play(); // Start the video
-    }, 1000); // 4 seconds
+  }, 1000); // 1 second
+
+  // Add a timeupdate event listener to the video
+  heroVideo.addEventListener("timeupdate", () => {
+      // Check if the current time has reached or exceeded 1 minute, 5 seconds
+      if (heroVideo.currentTime >= 61) {
+          heroVideo.currentTime = 0; // Reset the video to the beginning
+          heroVideo.play(); // Replay the video
+      }
+  });
 });
+
 
 
 /////FOR INTRO 

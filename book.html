@@ -167,123 +167,95 @@
     <div class="contak">
         <h2 style="font-size: 2.2em; font-weight: 500;">Get In Touch</h2>
         <p>We are here to help! Reach out with any questions or project ideas, and let's start creating something amazing together. Fill the form below.</p>
-
     </div>
 
     <div class="contact-mother">
-
-
         <form id="contact-form" action="https://formspree.io/f/xldenpaw" method="POST">
-            <label for="current-location">Your Current Location</label>
-            <input type="text" id="current-location" name="current-location" placeholder="Where are you located currently?">
-        
-            <label for="event-date">Event Date</label>
+            <label for="name">Name (required)</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="phone">Phone Number (required)</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+            <label for="event-date">Event Date (required)</label>
             <input type="date" id="event-date" name="event-date" required placeholder="Select event date">
-        
+
+            <label for="guest-count">Number Of Guests (required)</label>
+            <input type="number" id="guest-count" name="guest-count" required placeholder="Estimated number of guests">
+
             <label for="event-type">Event Type</label>
-            <select id="event-type" name="event-type">
-                <option value="Wedding">Wedding</option>
-                <option value="Corporate">Corporate</option>
-                <option value="Social">Social</option>
-                <option value="Birthday">Birthday</option>
-                <option value="Other">Other</option>
+            <input type="text" id="event-type" name="event-type" placeholder="Specify the event type">
+
+            <label for="event-location">Event Location (required)</label>
+            <input type="text" id="event-location" name="event-location" required placeholder="Enter event location">
+
+            <label for="color-theme">Particular Color Theme In Mind?</label>
+            <input type="text" id="color-theme" name="color-theme" placeholder="Specify the color theme if any">
+
+            <label for="event-start-time">What Time Is Event Starting? (required)</label>
+            <input type="time" id="event-start-time" name="event-start-time" required>
+
+            <label for="event-end-time">What Time Is Event Ending? (required)</label>
+            <input type="time" id="event-end-time" name="event-end-time" required>
+
+            <label for="chairs-tables">Are We Bringing Chairs & Tables To The Venue? (required)</label>
+            <select id="chairs-tables" name="chairs-tables" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
             </select>
-        
-            <label for="event-count">How Many Events</label>
-            <input type="number" id="event-count" name="event-count" placeholder="Number of events">
-        
-            <label for="guest-count">No of Guests</label>
-            <input type="number" id="guest-count" name="guest-count" placeholder="Estimated number of guests">
-        
-            <label for="venue">Venue</label>
-            <input type="text" id="venue" name="venue" required placeholder="Event venue location">
-        
-            <label for="groom-name">Full Name Groom</label>
-            <input type="text" id="groom-name" name="groom-name" placeholder="Enter groom's full name">
-        
-            <label for="bride-name">Full Name Bride</label>
-            <input type="text" id="bride-name" name="bride-name" placeholder="Enter bride's full name">
-        
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Contact phone number">
-        
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="Enter email address">
-        
-            <label for="hashtag">Hashtag if Any</label>
-            <input type="text" id="hashtag" name="hashtag" placeholder="Unique hashtag for the event">
-        
-            <label for="three-words">3 Words to Describe Your Day</label>
-            <input type="text" id="three-words" name="three-words" placeholder="E.g., Elegant, Fun, Memorable">
-        
-            <label for="budget">Budget</label>
-            <input type="text" id="budget" name="budget" required placeholder="Event budget">
-        
-            <label for="overall-brief">Overall Brief on How You’d Explain Your Day</label>
-            <textarea id="overall-brief" name="overall-brief" rows="5" placeholder="Describe your vision for the event"></textarea>
-        
+
+            <label for="decor-notes">What Should We Note Concerning Decor? (required)</label>
+            <textarea id="decor-notes" name="decor-notes" required rows="3" placeholder="Add any specific decor notes"></textarea>
+
+            <label for="budget">Any Budget In Mind?</label>
+            <input type="text" id="budget" name="budget" placeholder="Specify your budget">
+
+            <label for="platform">Does Hall Have Elevated Platform For The Stage?</label>
+            <select id="platform" name="platform">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="installations">Does The Hall Allow Hanging Installations?</label>
+            <select id="installations" name="installations">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
             <button type="submit">Submit</button>
         </form>
-        
+
         <div id="success-message">Thanks for reaching out! We'll get back to you soon.</div>
 
-
         <div id="contct">
-
             <h3>Contact Information for Enquiries:</h3>
-
             <div class="contat">
-
                 <div class="cntct">
-
                     <p>Email:</p>
-    
                     <ul>
-                      
                         <li style="color: var(--dark-main-color);">DUTCHANDDOYENNEEVENTS@GMAIL.COM</li>
                     </ul>
-    
-    
                 </div>
-    
                 <div class="cntct">
-    
                     <p>Location:</p>
-    
                     <ul>
-    
                         <li style="color: var(--dark-main-color);">ABUJA, NIGERIA</li>
-                        
                     </ul>
-    
-    
                 </div>
-    
-    
                 <div class="cntct">
-    
                     <p>Contact Number</p>
-    
                     <ul>
-                        
                         <li style="color: var(--dark-main-color);">070 1193 9134</li>
-                        
                     </ul>
-    
-    
                 </div>
-
             </div>
-
-
-
         </div>
-
-
-      
-    
     </div>
 </section>
+
 <!---------------------------MAP--------------------------->
 
 
