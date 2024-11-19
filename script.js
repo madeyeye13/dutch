@@ -79,6 +79,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function nextSlide() {
+      // Remove active class from current slide
+      slides[currentSlide].classList.remove('active');
+      
+      // Move to next slide
+      currentSlide = (currentSlide + 1) % slides.length;
+      
+      // Add flash effect and active class to new slide
+      slides[currentSlide].classList.add('active', 'flash');
+      
+      // Remove flash class after animation completes
+      setTimeout(() => {
+          slides[currentSlide].classList.remove('flash');
+      }, 500);
+  }
+
+  // Start the slideshow
+  setInterval(nextSlide, 6000);
+});
+
+
 /////EXPERIENCE
 
 document.addEventListener('DOMContentLoaded', function () {
