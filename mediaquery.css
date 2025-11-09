@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilda Display", serif;
+}
+
+
+
+
+@media (min-width: 728px) {
+
+
+    /*-------------HEADER------------*/
+
+    /* Navigation */
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .logo {
+    padding-left: 30px;
+  }
+
+  .logo img {
+    
+    height: 25px; /* Adjust size as needed */
+  }
+
+  .menu-icon {
+    padding-right: 30px;
+  }
+
+
+  .menu-icon i {
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+  }
+
+
+  .close-icon {
+    padding: 25px;
+    text-align: right;
+  }
+  
+  .close-icon i {
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+
+  .nav-list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+  }
+
+
+
+  /*-------------HERO----------*/
+
+
+  .hero-button {
+    position: absolute;
+    z-index: 200;
+    bottom: 50px;
+    padding-left: 50px;
+    padding-right: 30px;
+    cursor: pointer;
+
+  }
+
+  .hero-button button {
+    padding: 20px 70px;
+    border-radius: 50px;
+    border: none;
+    font-family: var(--font-2);
+    color: var(--dark-main-color);
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+
+  /*----------------INTRO---------------*/
+
+
+  .int-p p {
+    font-size: 1.5em;
+    color: var(--fade-out);
+  }
+
+  .int h2 {
+    font-weight: 400;
+    font-size: 2.5em;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+
+  .int-img img {
+    
+    width: 95%;
+    position: absolute;
+    bottom: 20px;
+    
+    
+  }
+
+  .intro-imgmom {
+    margin-top: 50px;
+    position: relative;
+  }
+
+
+ 
+
+  .intro-img {
+    position: relative;
+    width: 98%;
+    height: 500px;
+    background-color: var(--gold-color);
+    left: 10px;
+    
+  }
+
+
+  .intro1 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  /* .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 50px;
+  } */
+
+
+  /*---------------------EXPERIENCE------------*/
+
+
+  #exp {
+    background-image: url(image/7.jpg);
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-blend-mode: overlay;
+    background-color: #160e0d;
+    opacity: 1;
+}
+
+.exp1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.exp2 {
+    display: flex;
+    flex-direction: row;
+    color: var(--white-color);
+    font-family: var(--font-2);
+    gap: 20px;
+    margin-top: 0px;
+  
+  }
+
+.exp4 {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    top: 20px;
+}
+
+
+.exp2 h3 {
+    font-weight: 500;
+    top: 5px;
+    font-family: var(--font-1);
+  }
+
+
+
+
+}
+
+
+/*--------------SMALL DESKTOP-----------*/
+
+
+@media (min-width: 1024px) {
+
+    :root {
+        --gold-color:#bd8e36;
+        
+       
+        --white-color: white;
+        --fade-out:rgb(85, 85, 85);
+        --dark-main-color:#160e0d;
+        --font-1:"Gilda Display", serif;
+        --font-2: "Poppins", sans-serif;
+        --font-3: "Josefin Sans", sans-serif;
+          
+    }
+
+
+
+
+    .header {
+        display: none;
+    }
+
+
+    .heading {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* display: flex; */
+        /* justify-content: space-between; */
+        align-items: center;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+        z-index: 1000;
+    }
+
+
+    .head-wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; 
+        padding-left: 50px;
+        /* padding-right: 50px; */
+        align-content: center;
+        gap: 110px;
+
+        
+    }
+
+
+    .logo-id img {
+    
+        height: 30px; /* Adjust size as needed */
+    }
+
+    .hd-wrap h3 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 0.7em;
+        color: white;
+    }
+
+    .hd-wrap i {
+        color: white;
+        /* font-family: "Poppins", sans-serif; */
+    }
+
+    .hd-icon {
+        display: flex;
+        gap: 10px;
+        font-size: 0.9em;
+    }
+
+    .book-wrap {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: var(--font-2);
+        position: relative;
+        right: 50px;
+    
+        color: white;
+        background-color: none;
+        transition: color 0.3s, background-color 0.3s, border-top 0.3s, border-bottom 0.3s;
+    }
+
+    .book-wrap:hover {
+        color: black;
+        background-color: var(--gold-color);
+        border-top: 1px solid var(--gold-color);
+        border-bottom: 1px solid var(--gold-color);
+    }
+
+    .book-wrap h3 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        color: white;
+        position: relative;
+        font-size: 0.7em;
+    }
+
+    .nav-wrap2 {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        
+    }
+
+    .nav-wrap2 a {
+        color: inherit;
+        text-decoration: none;
+        font-family: var(--font-2);
+        font-weight: 400;
+    }
+
+    .nav-wrap2 ul, li  {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        font-size: 0.7em;
+        
+    }
+
+
+    .heading.scrolled {
+        background-color: black;
+    }
+
+
+    #hero {
+        position: relative;
+        width: 100%;
+        height: 150vh;
+        overflow: hidden;
+      }
+
+      .hero-button {
+        display: none;
+      }
+
+
+      /*================ INTRO--------------*/
+      
+      
+      .intrro {
+        display: flex;
+        gap: 50px;
+        padding-right: 50px;
+      }
+
+      .intro1 {
+        width: 100%;
+      }
+
+      .image-grid {
+        width: 100%;
+        margin-top: 0px;
+      }
+    
+
+      
+      
+      /*---------------------EXPERIENCE------------*/
+
+
+        #exp {
+            background-image: url(image/7.jpg);
+            overflow: hidden;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            background-blend-mode: overlay;
+            background-color: #160e0d;
+            opacity: 1;
+        }
+
+        .exp1 {
+            display: flex;
+            padding-left: 50px;
+            padding-right: 50px;
+            flex-direction: row;
+            gap: 120px;
+        }
+
+        .exp2 {
+            display: flex;
+            flex-direction: row;
+            color: var(--white-color);
+            font-family: var(--font-2);
+            gap: 20px;
+            margin-top: 0px;
+          
+          }
+
+        .exp4 {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            top: 20px;
+        }
+
+
+        .exp2 h3 {
+            font-weight: 500;
+            top: 5px;
+            font-family: var(--font-1);
+          }
+
+
+          
+        /*---------------------MORE-------------*/
+
+        .container {
+            display: flex;
+            justify-content: left;
+            text-align: left;
+            font-family: var(--font-1);
+        }
+        
+        .reveal-wrap {
+            position: relative;
+            overflow: hidden;
+            padding: 50px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-out; /* Added smooth opacity transition */
+        }
+
+
+        /*----------------EXPLORE PORTFOLIO--------*/
+
+        #service {
+            background-image: url(image/87.jpg);
+            overflow: hidden;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: left;
+            margin-top: 90px;
+            margin-bottom: 50px;
+            color: var(--white-color);
+            background-blend-mode: overlay;
+            background-color: #160e0daa;
+            height: 100vh;
+        }
+
+
+        .service2  {
+            padding-left: 50%;
+            padding-right: 50px;
+          }
+
+          .service2 h2 {
+            padding-right: 50px;
+            font-size: 3em;
+          }
+
+          /*----------------ABOUT US HOMEPAGE------------*/
+
+
+        #info {
+            margin-top: 150px;
+            overflow: hidden;
+            text-align: center;
+            
+            
+        }
+        
+        .info1 {
+            display: flex;
+            flex-direction: row;
+            padding-left: 50px;
+            padding-right: 50px;
+            gap: 40px;
+        
+        }
+
+        .info2 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        
+        }
+
+        .info2 h2 {
+            font-size: 2.5em;
+        }
+
+        .infor3 {
+            width: 100%;
+            height: 120vh;
+        }
+
+        .infor3 button {
+            padding: 15px 50px;
+            margin-bottom: 0px;
+            border: none;
+            border-radius: 50px;
+            background-color: var(--white-color);
+            font-family: var(--font-2);
+            font-size: 0.9em;
+          
+          }
+
+
+          /*------------------------TESTIMONIAL-------------*/
+
+          
+            .testimonial-wrapper {
+              flex-direction: row;
+            }
+          
+            .full-picture {
+              display: block;
+              width: 50%;
+              height: 70vh;
+              margin-right: -4px; /* Aligns with the testimonial container */
+            }
+          
+            .testimonial-container {
+              width: 50%;
+              margin-left: -4px; /* Aligns with the full picture */
+            }
+
+
+
+        /*----------------------FOOOOTER------------*/
+
+
+        .footer-nav a {
+            color: var(--gold-color);
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: opacity 0.3s ease;
+          }
+          
+          
+
+         
+
+          
+          
+
+}

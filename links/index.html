@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dutch & Doyenne Events</title>
+
+    <!--============Google Fonts================-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgba(0, 0, 0, 0.404);
+            background-blend-mode: overlay;
+            background-image: url(/image/58.jpg);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: -1;
+        }
+        .container {
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            z-index: 10;
+        }
+        .profile-image {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        .company-name {
+            font-family: 'Gilda Display', serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .tagline {
+            font-family: 'Poppins', sans-serif;
+            color: #d1d1d1;
+            margin-bottom: 30px;
+        }
+        .link-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            position: relative;
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg, 
+                transparent, 
+                rgba(255,255,255,0.2), 
+                transparent
+            );
+            transition: all 0.6s ease;
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+        .btn:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: skew(-5deg);
+        }
+        .btn i {
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover i {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- <video autoplay loop muted class="background-video">
+        <source src="/image/linkvid.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div> -->
+    
+    <div class="container">
+        <img src="/image/57.jpg" alt="Dutch & Doyenne Events" class="profile-image">
+        
+        <h1 class="company-name">Dutch & Doyenne Events</h1>
+        <p class="tagline">Exquisite Designs & Impeccable Services </p>
+        
+        <div class="link-buttons">
+            <a href="https://dutchanddoyenneevents.com.ng" class="btn">
+                <i class="fas fa-home"></i> View Our Website
+            </a>
+            <a href="/book" class="btn">
+                <i class="fas fa-calendar-alt"></i> Book Appointment
+            </a>
+            <a href="/about" class="btn">
+                <i class="fas fa-info-circle"></i> About Us
+            </a>
+            <a href="https://wa.link/g9vbxm" class="btn">
+                <i class="fab fa-whatsapp"></i> Whatsapp
+            </a>
+        </div>
+    </div>
+</body>
+</html>
