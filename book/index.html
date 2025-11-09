@@ -163,16 +163,11 @@
 
 
     
-  <div id="success-message" class="hidden">
-    Thanks for submitting the form, we'll get back to you.
-</div>
-
-<!-- Contact Section -->
-
+  <!-- Contact Section -->
 <section class="contact-section">
     <div class="contak">
         <h2 style="font-size: 2.2em; font-weight: 500;">Get In Touch</h2>
-        <p>We are here to help! Reach out with any questions or project ideas, and let's start creating something amazing together. Fill the form below.</p>
+        <p>After you fill out this order request, we will contact you to go over details and date availability before the order is completed. If you would like faster service and direct information on pricing please Contact us on WhatsApp at 07011939134 or dutchanddoyenneevents@gmail.com</p>
     </div>
 
     <div class="contact-mother">
@@ -183,58 +178,70 @@
             <label for="phone">Phone Number (required)</label>
             <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
 
-            <label for="email">Email (required)</label>
+            <label for="email">Email Address (required)</label>
             <input type="email" id="email" name="email" required placeholder="Enter your email address">
 
-            <label for="event-date">Event Date (required)</label>
-            <input type="date" id="event-date" name="event-date" required placeholder="Select event date">
+            <label for="event-date">What date is your event? (required)</label>
+            <input type="date" id="event-date" name="event-date" required>
 
-            <label for="guest-count">Number Of Guests (required)</label>
+            <label for="guest-count">Estimated Number Of Guests (required)</label>
             <input type="number" id="guest-count" name="guest-count" required placeholder="Estimated number of guests">
 
-            <label for="event-type">Event Type</label>
-            <input type="text" id="event-type" name="event-type" placeholder="Specify the event type">
+            <label for="event-style">Do you want a simple event? A classy or a luxury event? (required)</label>
+            <select id="event-style" name="event-style" required>
+                <option value="">Select event style</option>
+                <option value="Simple">Simple</option>
+                <option value="Classy">Classy</option>
+                <option value="Luxury">Luxury</option>
+            </select>
 
-            <label for="event-location">Event Location (required)</label>
-            <input type="text" id="event-location" name="event-location" required placeholder="Enter event location">
+            <label for="event-type">What kind of event are you having? A wedding? A child's event, or an adult's birthday? Kindly specify</label>
+            <input type="text" id="event-type" name="event-type" placeholder="e.g., Wedding, Child's birthday, Adult's birthday, etc.">
 
-            <label for="color-theme">Particular Color Theme In Mind?</label>
-            <input type="text" id="color-theme" name="color-theme" placeholder="Specify the color theme if any">
+            <label for="event-location">Kindly state the location and venue of your event (required)</label>
+            <input type="text" id="event-location" name="event-location" required placeholder="Enter event location and venue">
 
-            <label for="event-start-time">What Time Is Event Starting? (required)</label>
+            <label for="color-theme">Any particular color theme in mind? (required)</label>
+            <input type="text" id="color-theme" name="color-theme" required placeholder="Specify the color theme">
+
+            <label for="venue-feeling">Can you describe the way you would love to feel when you enter your event venue? (required)</label>
+            <textarea id="venue-feeling" name="venue-feeling" required rows="3" placeholder="Describe the feeling or atmosphere you want"></textarea>
+
+            <label for="event-start-time">What time is the event starting? (required)</label>
             <input type="time" id="event-start-time" name="event-start-time" required>
 
-            <label for="event-end-time">What Time Is Event Ending? (required)</label>
+            <label for="event-end-time">What time is the event ending? (required)</label>
             <input type="time" id="event-end-time" name="event-end-time" required>
 
-            <label for="chairs-tables">Are We Bringing Chairs & Tables To The Venue? (required)</label>
+            <label for="chairs-tables">Are we bringing chairs and tables to the venue? (required)</label>
             <select id="chairs-tables" name="chairs-tables" required>
+                <option value="">Select option</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
-            <label for="decor-notes">What Should We Note Concerning Decor? (required)</label>
+            <label for="decor-notes">Any specifics you would want us to note concerning decor? (required)</label>
             <textarea id="decor-notes" name="decor-notes" required rows="3" placeholder="Add any specific decor notes"></textarea>
 
-            <label for="budget">Any Budget In Mind?</label>
+            <label for="budget">Any Budget in mind?</label>
             <input type="text" id="budget" name="budget" placeholder="Specify your budget">
 
-            <label for="platform">Does Hall Have Elevated Platform For The Stage?</label>
+            <label for="platform">Does the hall have an elevated platform for the stage?</label>
             <select id="platform" name="platform">
+                <option value="">Select option</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
-            <label for="installations">Does The Hall Allow Hanging Installations?</label>
+            <label for="installations">Does the hall allow hanging installations?</label>
             <select id="installations" name="installations">
+                <option value="">Select option</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
             <button type="submit">Submit</button>
         </form>
-
-        <div id="success-message">Thanks for reaching out! We'll get back to you soon.</div>
 
         <div id="contct">
             <h3>Contact Information for Enquiries:</h3>
@@ -262,14 +269,16 @@
     </div>
 </section>
 
-<!---------------------------MAP--------------------------->
+<!-- Success Message -->
+<div id="success-message" class="hidden">
+    Thanks for reaching out! We'll get back to you soon.
+</div>
 
-
+<!-- Map Section -->
 <section id="map">
-
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252187.7026599314!2d7.2850551942422515!3d9.024219279233671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e745f4cd62fd9%3A0x53bd17b4a20ea12b!2sAbuja%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1731422786695!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
 </section>
+
 
 
 
@@ -329,7 +338,7 @@
 
 
         #ot-hero {
-            background-image: url(../image/71.jpg);
+            background-image: url(../image/44.jpg);
             display: flex;
             height: 50vh;
             background-position: center;
@@ -366,19 +375,13 @@
         background-color: white;
         border-radius: 8px;
         overflow: hidden;
-        
-        
     }
-
-    
-    
 
     .contak h2 {
         font-size: 24px;
         color: #333;
         text-align: center;
         margin-bottom: 20px;
-        text-align: center;
     }
 
     .contak p {
@@ -386,16 +389,12 @@
         color: #666;
         font-size: 16px;
         margin-bottom: 20px;
-        text-align: center;
-        
     }
 
     #contct {
         margin-top: 30px;
         list-style: none;
         margin-bottom: 50px;
-        /* padding-left: 25px;
-        padding-right: 25px; */
     }
 
     #contct h3 {
@@ -419,8 +418,6 @@
         color: var(--dark-main-color);
         font-size: 1.2em;
     }
-
-    
 
     form {
         display: flex;
@@ -458,7 +455,6 @@
         background-color: var(--dark-main-color);
     }
 
-    /* Success message */
     #success-message {
         position: fixed;
         top: 10px;
@@ -477,7 +473,6 @@
     .hidden {
         display: none;
     }
-
 
 
         
@@ -509,7 +504,7 @@
 
 
       #ot-hero {
-            background-image: url(../image/71.jpg);
+            background-image: url(../image/44.jpg);
             display: flex;
             height: 80vh;
             background-position: center;
@@ -573,43 +568,35 @@
     }
 
     .contact-mother {
-
-        display: flex;
-        gap: 100px;
-
-
+            display: flex;
+            gap: 100px;
         }
 
         form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         }
 
         .contact-section {
-        max-width: 1000px;
-        margin: 50px auto;
-        padding: 25px;
-        background-color: white;
-        border-radius: 8px;
-
-
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
         }
 
-
         .contak p {
-        text-align: center;
-        color: #666;
-        font-size: 16px;
-        margin-bottom: 60px;
-        text-align: center;
-
-
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 60px;
         }
 
         .contak h2 {
-        text-align: center;
+            text-align: center;
         }
+
 
 
     }
