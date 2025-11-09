@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
   // Add a timeupdate event listener to the video
   heroVideo.addEventListener("timeupdate", () => {
       // Check if the current time has reached or exceeded 1 minute, 5 seconds
-      if (heroVideo.currentTime >= 61) {
+      if (heroVideo.currentTime >= 45) {
           heroVideo.currentTime = 0; // Reset the video to the beginning
           heroVideo.play(); // Replay the video
       }
